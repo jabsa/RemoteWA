@@ -168,7 +168,7 @@ if [ "$(id -u)" = "0" ]; then
 				echo -e "$yellowColour-> Realizando registro...$endColour\n"
 				sleep 2
 
-				sudo yowsup-cli registration --register $codigo_registro --phone $cc$phone --cc $cc
+				sudo yowsup-cli registration --register $codigo_registro --phone $cc$phone --cc $cc -E android
 
 				echo -e -n "\n$yellowColour-> Introduce la pw generada:$endColour "
 				read password
@@ -199,7 +199,7 @@ if [ "$(id -u)" = "0" ]; then
 				sudo yowsup-cli demos --config whatsapp_config.txt --send $prefijo_envio$numero_envio "$mensaje"
 
 				echo -e "$redColour\nPresiona <Enter> para continuar...$endColour"
-				read	
+				read
 
 			elif [ "$respuesta" = "4" ]; then
 				echo -e "\n$blueColour-> Esnifando conversaciones...$endColour\n"
